@@ -10,7 +10,7 @@ b: ## build docker
 	docker build -f Dockerfile -t $(NAME_CONTAINER) .
 .PHONY: r
 r: ## run docker
-	docker run -it --rm -v `pwd`/:/work/ -p $(EXPOSED_PORT):$(EXPOSED_PORT) $(NAME_CONTAINER)
+	docker run -it --rm --gpus all -v `pwd`/:/work/ -p $(EXPOSED_PORT):$(EXPOSED_PORT) $(NAME_CONTAINER)
 
 # docker commands
 export NONE_DOCKER_IMAGES=`docker images -f dangling=true -q`

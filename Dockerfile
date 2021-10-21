@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y --quiet --no-install-recommends \
 RUN pip install -q --upgrade pip
 RUN pip install -r requirements.txt -q
 
+RUN apt-get install -y fonts-migmix
 
 WORKDIR /work
 EXPOSE 8888

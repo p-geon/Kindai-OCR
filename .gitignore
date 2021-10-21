@@ -2,3 +2,6 @@ __pycache__
 pretrain/*.pth
 pretrain/*.pkl
 
+data/result/*.txt
+data/result/*.jpg
+data/result/*.png
